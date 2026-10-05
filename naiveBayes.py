@@ -1,4 +1,13 @@
 """
+This is for the API calls for difficulty.
+def generatePrompt(model, targetDifficulty):
+    candidatePrompts = [] # an array of prompts based on what level we are on
+    scoredPrompts = [] # score to each prompt in the array
+
+    # within this loop we will look at probabilities and with each level we will get the probability of what we want to challenge
+    for candidate in candidates:
+        testPrompt()
+
 
 
 """
@@ -98,5 +107,7 @@ def trainModel():
 
         return spam_prob, ham_prob, prediction
 
-def testPrompt():
-    print()
+# this function is to bring in a test prompt into the parameter
+def testPrompt(text):
+    print(text)
+
