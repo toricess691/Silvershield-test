@@ -10,6 +10,19 @@ def generatePrompt(model, targetDifficulty):
 
 
 
+
+    "id": 1,
+    "channel": "email",
+    "difficulty": <- should be calculated from naive bayes. I want to return the function so it is accessable here.
+    "prompt": "Do you think the following "dataType" is real?", 
+    "email_from": "Samantha Jenkins <samantha.jenkins@amazonpayreview.com>", <- we can have a parser here
+    "email_subject": "Urgent: Amazon Pay Update Required", 
+    "email_html": "<p>Dear valued customer,</p><p>We have recently updated our Amazon Pay system to provide an enhanced user experience. To ensure a seamless transition, it is essential that you reset your password and update your account information.</p><p>Please click <a href='https://amazonpayreview.com/account-update'>here</a> to complete the required steps.</p><p>If you need assistance, contact support at 1-800-123-4567. We are available 24/7.</p><p>Best regards,<br>Samantha Jenkins</p>",
+    "options": ["real", "fake"],
+    "correct": "fake"
+
+
+
 """
 
 import pandas as pd
@@ -107,7 +120,10 @@ def trainModel():
 
         return spam_prob, ham_prob, prediction
 
+    # returning the function 
+    def testPrompt(self):
+        return classify(text)
+
 # this function is to bring in a test prompt into the parameter
-def testPrompt(text):
-    print(text)
+
 
